@@ -1,4 +1,4 @@
-# 🎯🎓 Clario - One Stop Career Platform
+# 🎯🎓 RE-Skill - One Stop Career Platform
 
 > **Clarity today, Success follows tomorrow**
 
@@ -342,6 +342,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 *Transforming career confusion into clarity*
 
-[![GitHub Stars](https://img.shields.io/github/stars/ritesh-sinha29/HackIndia-Clario?style=social)](https://github.com/ritesh-sinha29/HackIndia-Clario)
+[![GitHub Stars](https://img.shields.io/github/stars/ritesh-sinha29/HackIndia-Re-Skill?style=social)](https://github.com/ritesh-sinha29/HackIndia-Re-Skill)
 
 </div>
