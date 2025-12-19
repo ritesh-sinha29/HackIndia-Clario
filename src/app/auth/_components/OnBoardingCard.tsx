@@ -89,8 +89,7 @@ type FormData = {
   profession?: Profession;
   // Step 3
   focus?: string;
-  // Step 4
-  calendarConnected: boolean;
+
 };
 
 export function OnboardingCard() {
@@ -118,7 +117,6 @@ export function OnboardingCard() {
     institution: "",
     profession: undefined,
     focus: undefined,
-    calendarConnected: false,
   });
 
   const focusOptions = useMemo(() => {
@@ -155,13 +153,6 @@ export function OnboardingCard() {
     if (step > 1) setStep((s) => s - 1);
   }
 
-  async function handleConnectCalendar() {
-    toast.info("Calendar connection required ");
-  }
-
-  function handleDisconnectCalendar() {
-    toast.info("Calendar connection required ");
-  }
 
   function addInviteFromInput() {
     const v = emailInput.trim();
@@ -230,7 +221,6 @@ export function OnboardingCard() {
           ? data.institution.trim().toLowerCase()
           : null,
         mainFocus: data.focus ? data.focus.trim().toLowerCase() : null,
-        calendarConnected: data.calendarConnected,
         current_status: data.profession?.toLocaleLowerCase() || null,
         is_verified: true,
       };
