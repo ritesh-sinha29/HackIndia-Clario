@@ -14,11 +14,13 @@ import { LuLoader } from "react-icons/lu";
 const MentorCallback = () => {
   const supabase = createClient();
   const router = useRouter();
-  const { mentor, isNewMentor, loading, ensureUserInDB } = useUserData();
+  const { mentor, isNewMentor, loading, ensureUserInDB, setMentor, setUser } = useUserData();
 
   async function signOut() {
     try {
       await supabase.auth.signOut();
+      setMentor(null);
+      setUser(null);
       router.push("/auth-mentor");
     } catch (error) {
       console.error("Error signing out:", error);
@@ -96,11 +98,11 @@ const MentorCallback = () => {
         </div>
 
         {/* just for testing */}
-        {/* <div className="absolute bottom-5 right-0 z-50">
+        {<div className="absolute bottom-5 right-0 z-50">
           <Button onClick={signOut} className="cursor-pointer">
             Sign out
           </Button>
-        </div> */}
+        </div>}
       </div>
     );
   }
